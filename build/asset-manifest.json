@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0447495b.css",
+    "main.js": "/static/js/main.e44fd026.js",
+    "static/media/Nunito-Regular.eot": "/static/media/Nunito-Regular.5fce679ffb1ab575bc6c.eot",
+    "static/media/Nunito-ExtraBold.eot": "/static/media/Nunito-ExtraBold.f02245188b6206866b22.eot",
+    "static/media/Nunito-Black.eot": "/static/media/Nunito-Black.c9b599f08be3b64d2d6f.eot",
+    "static/media/Nunito-Bold.eot": "/static/media/Nunito-Bold.a2701bfca7a1441d3ef8.eot",
+    "static/media/Nunito-Black.woff": "/static/media/Nunito-Black.063fc34c0ecf6e0ef5c1.woff",
+    "static/media/Nunito-ExtraBold.woff": "/static/media/Nunito-ExtraBold.8a79861cd9a93189f5ac.woff",
+    "static/media/Nunito-Regular.woff": "/static/media/Nunito-Regular.4ee94b8ced695aeaa2bd.woff",
+    "static/media/Nunito-Bold.woff": "/static/media/Nunito-Bold.04e786ab34c9265f2daa.woff",
+    "static/media/Nunito-Black.woff2": "/static/media/Nunito-Black.ed73437685511676fa23.woff2",
+    "static/media/Nunito-ExtraBold.woff2": "/static/media/Nunito-ExtraBold.9997ce3523a7530b5ae2.woff2",
+    "static/media/Nunito-Regular.woff2": "/static/media/Nunito-Regular.00ee14ab2e099377f996.woff2",
+    "static/media/Nunito-Bold.woff2": "/static/media/Nunito-Bold.977de8a8e61cd84bb1aa.woff2",
+    "static/media/pizza-logo.svg": "/static/media/pizza-logo.56ac87032d8f6fdf863326acd06c0d97.svg",
+    "index.html": "/index.html",
+    "main.0447495b.css.map": "/static/css/main.0447495b.css.map",
+    "main.e44fd026.js.map": "/static/js/main.e44fd026.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0447495b.css",
+    "static/js/main.e44fd026.js"
+  ]
+}
