@@ -1,0 +1,11 @@
+.pagination {
+    margin-top: 24px;
+    --pagination-active-bg: #FE5F1E;
+    --pagination-active-border-color: #FE5F1E;
+    --pagination-hover-bg: #fe5d1e57;
+    --pagination-hover-color: #FE5F1E;
+
+    .page-link {
+        color: #FE5F1E;
+    }
+}

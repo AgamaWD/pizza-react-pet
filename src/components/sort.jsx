@@ -1,4 +1,30 @@
-function Sort() {
+import React from "react"
+
+function Sort({ value, onChangeType }) {
+
+    const [open, setOpen] = React.useState(false)
+
+    const sortList = [
+        {
+            name: 'популярности',
+            value: 'rating'
+        },
+        {
+            name: 'цене',
+            value: 'price'
+        },
+        {
+            name: 'алфавиту',
+            value: 'title'
+
+        },
+    ]
+
+    function sortController(currentIndex) {
+        onChangeType(sortList[currentIndex].value)
+        setOpen(false)
+    }
+
     return (
         <div className="sort">
             <div className="sort__label">
@@ -8,15 +34,19 @@ function Sort() {
                         fill="#2C2C2C" />
                 </svg>
                 <b>Сортировка по:</b>
-                <span>популярности</span>
+                <span onClick={() => setOpen(!open)}>{sortList.find(item => item.value === value).name}</span>
             </div>
-            <div className="sort__popup">
-                <ul>
-                    <li className="active">популярности</li>
-                    <li>цене</li>
-                    <li>алфавиту</li>
-                </ul>
-            </div>
+            {
+                open && (<div className="sort__popup">
+                    <ul>
+                        {
+                            sortList.map((item, index) => (
+                                <li onClick={() => sortController(index)} className={value === sortList[index].value ? 'active' : ''} key={item.value}>{item.name}</li>
+                            ))
+                        }
+                    </ul>
+                </div>)
+            }
         </div>
     )
 }

@@ -3,7 +3,7 @@
 .button {
   display: inline-block;
   background-color: $orange;
-  border-radius: 30px;
+  border-radius: 16px;
   padding: 10px 20px;
   min-width: 100px;
   text-align: center;
@@ -133,6 +133,7 @@
   &--cart {
     display: flex;
     align-items: center;
+    margin-left: auto;
     line-height: 23px;
     padding: 12px 25px;
 

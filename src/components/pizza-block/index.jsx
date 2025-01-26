@@ -1,6 +1,6 @@
 import React from "react"
 
-function PizzaBlock({ id, title, price, imageUrl, sizes, types }) {
+function PizzaBlock(props) {
 
     const [activeType, setActiveType] = React.useState(0)
     const [activeWeight, setActiveWeight] = React.useState(0)
@@ -9,29 +9,29 @@ function PizzaBlock({ id, title, price, imageUrl, sizes, types }) {
 
 
     return (
-        <div className="pizza-block" key={id}>
+        <div className="pizza-block">
             <img className="pizza-block__image"
-                src={imageUrl}
+                src={props.imageUrl}
                 alt="Pizza" />
-            <h4 className="pizza-block__title">{title}</h4>
+            <h4 className="pizza-block__title">{props.title}</h4>
             <div className="pizza-block__selector">
                 <ul>
                     {
-                        types.map((type, index) => (
+                        props.types.map((type, index) => (
                             <li onClick={() => setActiveType(index)} key={index} className={activeType === index ? 'active' : ''}>{typeNames[type]}</li>
                         ))
                     }
                 </ul>
                 <ul>
                     {
-                        sizes.map((size, index) => (
+                        props.sizes.map((size, index) => (
                             <li onClick={() => setActiveWeight(index)} key={index} className={activeWeight === index ? 'active' : ''}>{size} см.</li>
                         ))
                     }
                 </ul>
             </div>
             <div className="pizza-block__bottom">
-                <div className="pizza-block__price">от {price} ₽</div>
+                <div className="pizza-block__price">от {props.price} ₽</div>
                 <button className="button button--outline button--add" >
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                         xmlns="http://www.w3.org/2000/svg">

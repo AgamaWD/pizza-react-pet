@@ -8,10 +8,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 24px;
   }
 
   &__logo {
     display: flex;
+    flex: 0 0 auto;
 
     img {
       margin-right: 15px;
@@ -28,5 +30,15 @@
     p {
       color: #7b7b7b;
     }
+  }
+
+  .button--cart {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .search {
+    margin-right: auto;
+    flex: 1 1 100%;
   }
 }
