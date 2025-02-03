@@ -1,24 +1,32 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit"
 
-export const filterSlice = createSlice({
-  name: 'filter',
-  initialState: {
-    value: 0,
-  },
+const initialState = {
+  categoryId: 0,
+  pageCount: 1,
+  sortType: 'rating'
+}
+
+const filterSlice = createSlice({
+  name: 'filters',
+  initialState: initialState,
   reducers: {
-    increment: (state) => {
-
-      state.value += 1
+    setCategoryId(state, action) {
+      state.categoryId = action.payload;
     },
-    decrement: (state) => {
-      state.value -= 1
+    setSortType(state, action) {
+      state.sortType = action.payload;
     },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload
+    setPageCount(state, action) {
+      state.pageCount = action.payload;
     },
-  },
+    setFilterParams(state, action) {
+  
+      state.categoryId = Number(action.payload.category)
+      state.pageCount = Number(action.payload.page)
+      state.sortType = action.payload.sort
+    }
+  }
 })
 
-export const { increment, decrement, incrementByAmount } = filterSlice.actions
-
+export const { setCategoryId, setSortType, setPageCount, setFilterParams } = filterSlice.actions;
 export default filterSlice.reducer
